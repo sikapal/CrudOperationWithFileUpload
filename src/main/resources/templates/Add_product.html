@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+	
+		<title>Add Product</title>
+		
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin = "anonymous" >
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script> 
+	     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	</head>
+	
+	
+	
+	<body>
+		    <div align="center">
+				<h1>New Product</h1>
+				<br/>
+				<form action="#" th:action="@{/saveProduct}" th:object="${product}"
+				method="post" enctype="multipart/form-data">
+				
+				<table border="0" cellpadding="10">
+					<tr>
+						<td>
+							Product Name :
+						</td>
+						
+						<td>
+							<input type="text" th:field="*{productName}" placeholder="Product Name"/>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							Price :
+						</td>
+						
+						<td>
+							<input type="text" th:field="*{price}" placeholder="price"/>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							Photo :
+						</td>
+						
+						<td>
+							<input type="file" name="image" accept="image/png, image/jpeg"/>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">
+							<button type="submit" class="btn btn-primary">Save Product</button>
+						</td>
+						
+				
+					</tr>
+				</table>
+					
+					
+				</form>
+				
+				<a href="@{/}">Back to Products</a>
+			</div>
+		
+	</body>
+	
+	<footer>
+		
+		
+	</footer>
+	
+	
+	
+	
+</html>
